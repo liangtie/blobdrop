@@ -3,7 +3,11 @@
 #include <QGuiApplication>
 #include <cstdlib>
 #include <iostream>
+#ifdef _WIN32
+#include <windows.h>
+#else
 #include <unistd.h>
+#endif
 
 #ifdef Q_OS_UNIX
 #include <pwd.h>
